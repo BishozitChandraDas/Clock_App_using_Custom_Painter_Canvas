@@ -50,7 +50,8 @@ class ClockPainter extends CustomPainter {
     var outlineBrush = Paint()
       ..color = Colors.white
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 10;
+      //..strokeWidth = 10;
+      ..strokeWidth = 5;
 
     var centerFillBrush = Paint()..color = Colors.white;
 
@@ -85,8 +86,10 @@ class ClockPainter extends CustomPainter {
       ..style = PaintingStyle.stroke
       ..strokeCap = StrokeCap.round
       ..strokeWidth = 3;
-    canvas.drawCircle(center, radius - 40, fillBrush);
-    canvas.drawCircle(center, radius - 40, outlineBrush);
+    // canvas.drawCircle(center, radius -40 , fillBrush);
+    // canvas.drawCircle(center, radius -40 , outlineBrush);
+    canvas.drawCircle(center, radius , fillBrush);
+    canvas.drawCircle(center, radius , outlineBrush);
 
     var hourHandX = centerX +
         60 * cos((dateTime.hour * 30 + dateTime.minute * 0.5) * pi / 180);
